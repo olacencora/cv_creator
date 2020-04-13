@@ -18,18 +18,48 @@ body {
 }
 
 .page-box {
-  max-height: 550px;
-  width: 350px;
-  height: 100%;
+  margin: 20% auto;
+  height: 350px;
+  max-width: 550px;
+  width: 100%;
   background: #f8f8f8;
   border-radius: 20px;
   position: relative;
+  border: 1px solid #ffdd00;
+  padding: 3rem;
+}
+
+.buttons-box {
+  position: absolute;
+  width: 110%;
+  left: -5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .prev {
   background: #ededed;
-  position: absolute;
+  position: relative;
   width: 60px;
   height: 60px;
   border-radius: 50%;
+}
+
+.next {
+  background: #262626;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.arrow {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  transform: rotate(135deg);
+  border-bottom: 2px solid rgb(216, 32, 32);
+  border-right: 2px solid rgb(204, 30, 30);
 }
