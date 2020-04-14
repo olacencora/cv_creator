@@ -15,6 +15,7 @@ body {
   background-color: #fff;
   width: 100%;
   height: 100%;
+  font-weight: 200;
 }
 
 .page-box {
@@ -60,6 +61,37 @@ body {
   width: 20px;
   height: 20px;
   transform: rotate(135deg);
-  border-bottom: 2px solid rgb(216, 32, 32);
-  border-right: 2px solid rgb(204, 30, 30);
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  top: 20px;
+  left: 20px;
+}
+
+.next > .arrow {
+  transform: rotate(-45deg);
+}
+
+.text-header {
+  font-size: 28px;
+}
+
+.input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.dotted-line {
+  background-repeat: repeat-x;
+  background-size: 11px 4px;
+  height: 4px;
+  margin: 0px;
+  background-image: radial-gradient(
+    circle,
+    rgb(43, 43, 43) 1px,
+    transparent 2px
+  );
 }
