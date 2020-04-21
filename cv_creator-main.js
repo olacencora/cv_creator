@@ -5,25 +5,14 @@ console.log(nextButtons);
 
 function findParentPage() {
   console.log("test");
+  let parentPage = this.parentElement.parentElement;
+  let parentPageId = parentPage.id;
+  console.log(parentPageId);
+  let parentPageNum = parseInt(parentPageId.substr(1));
+  console.log(parentPageNum);
 }
 
-// for (let i = 0; i < nextButtons.length; i++) {
-//   console.log("test click");
-//   nextButtons[i].addEventListener("click", findParentPage());
-// }
-
-// document.querySelectorAll(".next").forEach((item) => {
-//   item.addEventListener("click", findParentPage());
-// });
-
-for (let i = 0; nextButtons.length; i++) {
-  let button = this;
-  console.log(button);
-  button.addEventListener("click", findParentPage);
+for (let i = 0; i < nextButtons.length; i++) {
+  console.log("test click");
+  nextButtons[i].addEventListener("click", findParentPage);
 }
-
-// nextButtons.forEach(function (elem) {
-//   elem.addEventListener("click", function () {
-//     console.log("test");
-//   });
-// });
