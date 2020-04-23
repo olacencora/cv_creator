@@ -109,9 +109,9 @@ body {
 /* functions  */
 
 #s1 {
-  display: none;
+  display: block;
 }
 
 #s2 {
-  display: block;
+  display: none;
 }
