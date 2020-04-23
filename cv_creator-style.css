@@ -33,6 +33,7 @@ body {
   border-radius: 20px;
   position: relative;
   padding: 3rem;
+  color: #000;
 }
 
 .buttons-box {
@@ -106,14 +107,67 @@ body {
   );
 }
 
+/* select  */
+
+.select-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.custom-select {
+  width: 200px;
+  font-family: "Raleway", sans-serif;
+}
+
+.select-box {
+  background-color: #f8f8f8;
+  color: #000;
+  font-family: "Raleway", sans-serif;
+  padding: 12px;
+  border: none;
+  font-size: 20px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.select-section:first-of-type ~ .select-box {
+  background-color: red;
+}
+
+.custom-select::before {
+  content: "\01F863";
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  pointer-events: none;
+}
+
+.custom-select:hover::before {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.custom-select select option {
+  padding: 30px;
+}
+
 /* functions  */
 
-#s1 {
+#s4 {
   display: block;
 }
 
 #s2,
 #s3,
-#s4 {
+#s1 {
   display: none;
 }
