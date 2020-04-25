@@ -50,3 +50,15 @@ let customSelect = document.getElementsByClassName("custom-select");
 for (i = 0; i < customSelect.length; i++) {
   selectElement = customSelect[i].getElementsByTagName("select")[0];
   console.log(selectElement);
+
+  // create new fake DIV with atributes
+  createdDiv = document.createElement("div");
+  createdDiv.setAttribute("class", "select-selected");
+  // find text in old select
+  createdDiv.innerHTML =
+    selectElement.options[selectElement.selectedIndex].innerHTML;
+  // put new DIv in place old hidden select
+  customSelect[i].appendChild(createdDiv);
+
+  console.log(createdDiv.innerHTML);
+}
