@@ -118,46 +118,40 @@ body {
 .custom-select {
   width: 200px;
   font-family: "Raleway", sans-serif;
+  position: relative;
 }
 
 .select-box {
   background-color: #f8f8f8;
   color: #000;
   font-family: "Raleway", sans-serif;
-  padding: 12px;
+  padding: 12px 40px 12px 12px;
   border: none;
   font-size: 20px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 4px rgba(148, 148, 148, 0.13),
+    -4px -4px 4px rgba(255, 255, 255, 0.8);
   outline: none;
+  border-radius: 25px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("Arrow 4.svg");
+  background-repeat: no-repeat;
 }
 
-.select-section:first-of-type ~ .select-box {
-  background-color: red;
+#select-1 {
+  background-position: 76px 21px;
 }
 
-.custom-select::before {
-  content: "\01F863";
-  font-family: "Raleway", sans-serif;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 20%;
-  height: 100%;
-  text-align: center;
-  font-size: 28px;
-  line-height: 45px;
-  color: rgba(255, 255, 255, 0.5);
-  background-color: rgba(255, 255, 255, 0.1);
-  pointer-events: none;
+#select-2 {
+  background-position: 198px 21px;
 }
 
-.custom-select:hover::before {
-  color: rgba(255, 255, 255, 0.6);
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.custom-select select option {
+.custom-select .select-box option {
   padding: 30px;
+  outline: none;
+  border-radius: 25px;
+  margin-top: 5px;
 }
 
 /* functions  */
