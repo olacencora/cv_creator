@@ -40,3 +40,13 @@ for (let i = 0; i < nextButtons.length; i++) {
 for (let i = 0; i < prevButtons.length; i++) {
   prevButtons[i].addEventListener("click", findParentPageOnPrev);
 }
+
+// select  /////////////////////////////////////////////////////////////
+let selectElement;
+let createdDiv;
+
+/*find any elements with the class "custom-select":*/
+let customSelect = document.getElementsByClassName("custom-select");
+for (i = 0; i < customSelect.length; i++) {
+  selectElement = customSelect[i].getElementsByTagName("select")[0];
+  console.log(selectElement);
