@@ -43,22 +43,37 @@ for (let i = 0; i < prevButtons.length; i++) {
 
 // select  /////////////////////////////////////////////////////////////
 let selectElement;
-let createdDiv;
+let createdDivSelect;
+let createdDivOption;
+let createdDivOptionList;
 
 /*find any elements with the class "custom-select":*/
 let customSelect = document.getElementsByClassName("custom-select");
-for (i = 0; i < customSelect.length; i++) {
+for (let i = 0; i < customSelect.length; i++) {
   selectElement = customSelect[i].getElementsByTagName("select")[0];
   console.log(selectElement);
 
   // create new fake DIV with atributes
-  createdDiv = document.createElement("div");
-  createdDiv.setAttribute("class", "select-selected");
+  createdDivSelect = document.createElement("div");
+  createdDivSelect.setAttribute("class", "select-selected");
   // find text in old select
-  createdDiv.innerHTML =
+  createdDivSelect.innerHTML =
     selectElement.options[selectElement.selectedIndex].innerHTML;
   // put new DIv in place old hidden select
-  customSelect[i].appendChild(createdDiv);
+  customSelect[i].appendChild(createdDivSelect);
 
-  console.log(createdDiv.innerHTML);
+  console.log(createdDivSelect.innerHTML);
+
+  // create new fake option list with atributes
+  createdDivOption = document.createElement("div");
+  createdDivOption.setAttribute("class", "select-items select-hide");
+
+  for (j = 0; j < selectElement.length; j++) {
+    // for each option in old select, create new list of options
+    createdDivOptionList = document.createElement("div");
+    createdDivOptionList.innerHTML = selectElement.options[j].innerHTML;
+    createdDivOptionList.addEventListener("click", function (e) {
+      // when you click on elelement from list, change text in select
+    });
+  }
 }
