@@ -216,7 +216,6 @@ ul li label input[type="checkbox"] {
 
 ul li label input[type="checkbox"]:checked ~ .icon-box {
   box-shadow: inset -2px -2px 5px white, inset 3px 3px 5px rgba(0, 0, 0, 0.1);
-  background-color: red;
 }
 
 ul li label input[type="checkbox"]:checked ~ .icon-box .fa {
@@ -240,16 +239,86 @@ ul li label .icon-box .fa {
   font-size: 30px;
   color: #6a9bd8;
 }
+/* dotted cointainer  */
+
+/* Customize the label (the container) */
+.dot-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.dot-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.dot-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.dot-container:hover input ~ .dot-checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.dot-container input:checked ~ .dot-checkmark {
+  background-color: #2196f3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.dot-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.dot-container input:checked ~ .dot-checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.dot-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
 /* functions  */
 
-#s5 {
+#s6 {
   display: block;
 }
 
 #s1,
 #s2,
 #s3,
-#s4 {
+#s4,
+#s5 {
   display: none;
 }
