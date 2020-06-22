@@ -251,11 +251,12 @@ ul li label .icon-box .fa {
   flex-direction: column;
 }
 
+.container-level {
+  display: flex;
+  flex-direction: row;
+}
+
 .container-stars {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border: none;
   border-radius: 20px;
   display: flex;
@@ -313,6 +314,7 @@ ul li label .icon-box .fa {
 #s1,
 #s2,
 #s3,
-#s4 {
+#s4,
+#s6 {
   display: none;
 }
