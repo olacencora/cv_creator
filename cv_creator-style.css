@@ -10,6 +10,7 @@ html {
   height: 100%;
 
   --bg-color: #ffffff;
+  --box-color: #f8f8f8;
 }
 
 body {
@@ -31,7 +32,7 @@ body {
   height: 350px;
   max-width: 550px;
   width: 100%;
-  background: #f8f8f8;
+  background: var(--box-color);
   border-radius: 20px;
   position: relative;
   padding: 3rem;
@@ -245,6 +246,10 @@ ul li label .icon-box .fa {
 
 /* stars  */
 
+.level-text {
+  color: ;
+}
+
 .container-level-box {
   width: 100%;
   display: flex;
@@ -274,17 +279,18 @@ ul li label .icon-box .fa {
 .stars-box label {
   display: inline-block;
   cursor: pointer;
-  width: 50px;
+  width: 30px;
 }
 
 .stars-box label::before,
 .stars-box label::after {
-  content: "\f005";
-  font-family: fontAwesome;
+  content: "";
   display: block;
   position: relative;
-  font-size: 50px;
-  stop-color: silver;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid red;
 }
 
 .stars-box label::after {
@@ -293,7 +299,7 @@ ul li label .icon-box .fa {
   top: 0;
   opacity: 0;
   transition-duration: 0.5s;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.51);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.51);
 }
 
 .stars-box label:hover::after,
